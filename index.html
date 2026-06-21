@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <header class="header">
+
+            <div>
+                <h1>👋 Welcome Back</h1>
+                <p>Manage your tasks like a pro.</p>
+            </div>
+
+            <div class="nav-left">
+                <button class="theme-btn">
+                   <i class="ri-moon-fill"></i>
+                </button>
+                <button class="add-task-btn">
+                    + Add Task
+                </button>
+            </div>
+        </header>
+
+
+        <section class="search-section">
+
+            <input type="text" placeholder="Search tasks..." id="searchTask">
+
+        </section>
+
+
+        <section class="filters-section">
+
+            <select id="filterCategory">
+                <option value="">All Categories</option>
+                <option value="study">Study</option>
+                <option value="work">Work</option>
+                <option value="health">Health</option>
+                <option value="personal">Personal</option>
+            </select>
+
+            <select id="filterStatus">
+                <option value="">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+
+            <select id="filterPriority">
+                <option value="">All Priorities</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <button class="reset-btn">
+                Reset
+            </button>
+
+        </section>
+
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total</span>
+                <h2 id="totalTask">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Completed</span>
+                <h2 id="completedTask">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Remaining</span>
+                <h2 id="remainingTask">0</h2>
+            </div>
+
+        </section>
+
+
+
+        <section class="tasks-section">
+
+            <div class="section-heading">
+
+                <h2>Your Tasks</h2>
+
+                <button class="clear-btn">
+                    Clear All
+                </button>
+
+            </div>
+
+            <div class="task-list">
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <div class="modal-overlay">
+
+        <div class="task-form-container">
+
+            <button class="close-btn">
+                X
+            </button>
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <div class="input-group">
+                    <label>Task Title</label>
+                    <input type="text" name="title" placeholder="Enter task title">
+                </div>
+
+                <div class="input-group">
+                    <label>Description</label>
+                    <textarea name="description" placeholder="Task description..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Category</label>
+                    <select name="category">
+                        <option>Study</option>
+                        <option>Work</option>
+                        <option>Personal</option>
+                        <option>Health</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Priority</label>
+                    <select name="priority">
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Due Date</label>
+                    <input type="date" name="dueDate">
+                </div>
+
+                <button class="submit-btn">
+                    Add Task
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="confirm-modal">
+
+        <div class="confirm-box">
+
+            <div class="warning-icon">
+                <i class="ri-delete-bin-6-line"></i>
+            </div>
+
+            <h3>Delete All Tasks?</h3>
+
+            <p>
+                This action cannot be undone.
+                All your tasks will be permanently deleted.
+            </p>
+
+            <div class="buttons">
+
+                <button class="cancel-btn">
+                    Cancel
+                </button>
+
+                <button class="delete-btn">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
