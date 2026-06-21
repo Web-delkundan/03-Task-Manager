@@ -14,6 +14,53 @@ const themeBtn = document.querySelector(".theme-btn")
 const icon = themeBtn.querySelector("i");
 
 
+// const defaultTasks = [
+//   {
+//     id: 1,
+//     title: "Complete JavaScript DOM Project",
+//     description: "Finish the task manager application and test all features.",
+//     category: "Study",
+//     priority: "High",
+//     dueDate: "2026-06-20",
+//     status: "pending"
+//   },
+//   {
+//     id: 2,
+//     title: "Practice DSA Questions",
+//     description: "Solve 5 recursion and backtracking problems.",
+//     category: "Study",
+//     priority: "Medium",
+//     dueDate: "2026-06-21",
+//     status: "pending"
+//   },
+//   {
+//     id: 3,
+//     title: "Morning Exercise",
+//     description: "30 minutes of running and stretching.",
+//     category: "Health",
+//     priority: "Low",
+//     dueDate: "2026-06-20",
+//     status: "completed"
+//   },
+//   {
+//     id: 4,
+//     title: "Build Portfolio Website",
+//     description: "Add projects and improve responsive design.",
+//     category: "Work",
+//     priority: "High",
+//     dueDate: "2026-06-25",
+//     status: "pending"
+//   },
+//   {
+//     id: 5,
+//     title: "Read Atomic Habits",
+//     description: "Read at least 20 pages.",
+//     category: "Personal",
+//     priority: "Low",
+//     dueDate: "2026-06-22",
+//     status: "pending"
+//   }
+// ];
 
 addBtn.addEventListener("click", () => {
     modal.classList.add("active");
